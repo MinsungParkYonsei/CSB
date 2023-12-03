@@ -3,7 +3,7 @@ import ListItem from "./Listitem";
 
 export const revalidate = 20
 
-export default async function List({}) {
+export default async function newList({}) {
   let db = (await connectDB).db('forum');
   let result = await db.collection('post').find().toArray();
   result = result.map((a)=>{
